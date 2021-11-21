@@ -9,6 +9,7 @@ import Loading from './components/Loading'
 function App() {
   const [users, setUsers] = useState<IUser[] | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   const fetchUsers = async (numberOfUsers: number = 1) => {
     try {
@@ -21,7 +22,7 @@ function App() {
       setLoading(false)
     } catch (error) {
       setLoading(false)
-      console.log(error)
+      setError((error as Error).message)
     }
   }
 
@@ -39,6 +40,7 @@ function App() {
         <Form onSubmit={fetchUsers} />
         {loading && <Loading />}
         {!loading && users && <UsersList users={users} />}
+        {!loading && error && <h4 className="error">{error}</h4>}
       </main>
     </div>
   )
