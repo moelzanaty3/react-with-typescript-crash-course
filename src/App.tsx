@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import UsersList from './containers/UsersList'
+import Form from './components/Form'
 import IUser from './interfaces/IUser'
 import Loading from './components/Loading'
 
@@ -35,8 +36,9 @@ function App() {
     <div className="App">
       <header className="App-header">Users List</header>
       <main>
+        <Form onSubmit={fetchUsers} />
         {loading && <Loading />}
-        {users && <UsersList users={users} />}
+        {!loading && users && <UsersList users={users} />}
       </main>
     </div>
   )
