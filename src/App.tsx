@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import UsersList from './containers/UsersList'
 import IUser from './interfaces/IUser'
 import Loading from './components/Loading'
 
@@ -35,11 +36,7 @@ function App() {
       <header className="App-header">Users List</header>
       <main>
         {loading && <Loading />}
-        {users && (
-          <pre>
-            <code>{JSON.stringify(users, null, 2)}</code>
-          </pre>
-        )}
+        {users && <UsersList users={users} />}
       </main>
     </div>
   )
