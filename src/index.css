@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html,
+body,
+.root {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: white;
+  overflow-x: hidden;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  color: white;
+}
+
+/* List Users */
+.list-users {
+  margin: 20px;
+  box-shadow: 5px 5px 25px 0 rgb(46 61 73 / 20%);
+  border-radius: 0.375rem;
+  border-top: 6px solid #1a73e8;
+}
+
+.list-users-top {
+  width: 100%;
+  border-bottom: 1px solid #d5d8df;
+  display: flex;
+}
+
+.search-users {
+  width: 100%;
+  padding: 20px 20px 20px 60px;
+  background-image: url('https://raw.githubusercontent.com/mohammedelzanaty/react-redux-guide-with-zanaty/40c1ab94ab2c53a111650d85288ede6162b585ac/mz-shop/src/assets/images/icons/search.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 1.2em;
+  font-size: 1.2em;
+  border: 0;
+  outline: none;
+}
+
+.users-container {
+  margin-top: 20px auto;
+  padding: 20px 20px 20px 20px;
+}
+
+.showing-users {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.showing-users button {
+  color: #1a73e8;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.number-of-users-form {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.form-actions button {
+  margin-right: 10px;
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.error {
+  width: 80%;
+  margin: 1rem auto;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
