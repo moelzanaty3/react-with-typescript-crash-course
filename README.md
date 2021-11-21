@@ -1,5 +1,7 @@
 # React With Type Script Crash Course [Demo](https://react-ts-crash-course.netlify.app/)
 
+## [Starter Gist](https://gist.github.com/mohammedelzanaty/d8e027c045f910378fb62490a9addf2f) 
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
