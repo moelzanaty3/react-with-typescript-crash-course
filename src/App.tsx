@@ -3,7 +3,7 @@ function App() {
     <div className="App">
       <header className="App-header">Users List</header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
